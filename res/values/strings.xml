@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
 
     <string name="hello">Hello World, AdDeluxeExampleActivity!</string>
     <string name="app_name">AdDeluxeExample</string>
+    <string name="show_addeluxe_ad">adDeluxeの広告がこの下に表示されます。</string>
 
 </resources>
