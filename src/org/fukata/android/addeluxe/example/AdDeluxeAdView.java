@@ -70,7 +70,7 @@ public class AdDeluxeAdView extends RelativeLayout {
 		public void onReceivedError(WebView view, int errorCode,
 				String description, String failingUrl) {
 			super.onReceivedError(view, errorCode, description, failingUrl);
-			Log.e(TAG, description);
+			Log.w(TAG, description);
 			setVisibility(View.GONE);
 		}
 
@@ -79,6 +79,7 @@ public class AdDeluxeAdView extends RelativeLayout {
 		 */
 		@Override
 		public boolean shouldOverrideUrlLoading(WebView view, String url) {
+			Log.d(TAG, "url=" + url);
 			Intent intent = new Intent(Intent.ACTION_VIEW);
 			intent.setData(Uri.parse(url));
 			mActivity.startActivity(intent);
