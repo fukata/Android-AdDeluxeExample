@@ -20,7 +20,6 @@ public class AdDeluxeAdView extends RelativeLayout {
 		mActivity = activity;
 		mSiteId = siteId;
 		setVisibility(View.GONE);
-		Log.d(TAG, "SiteId: " + mSiteId);
 	}
 
 	protected void onWindowVisibilityChanged(int visibility) {
@@ -31,6 +30,7 @@ public class AdDeluxeAdView extends RelativeLayout {
 	}
 	
 	public void loadAd() {
+		Log.d(TAG, "loadAd SiteId: " + mSiteId);
 		removeAllViewsInLayout();
 		
 		WebView view = new WebView(getContext());
@@ -82,6 +82,7 @@ public class AdDeluxeAdView extends RelativeLayout {
 			Log.d(TAG, "url=" + url);
 			Intent intent = new Intent(Intent.ACTION_VIEW);
 			intent.setData(Uri.parse(url));
+			intent.putExtra("referer", "http://google.com");
 			mActivity.startActivity(intent);
 			return true;
 		}

@@ -16,6 +16,5 @@ public class AdDeluxeExampleActivity extends Activity {
         AdDeluxeAdView adView = new AdDeluxeAdView(this, ADDELUXE_SITE_ID);
         RelativeLayout adLayout = (RelativeLayout) findViewById(R.id.ad);
         adLayout.addView(adView);
-        adView.loadAd();
     }
 }
