@@ -1,5 +1,7 @@
 package org.fukata.android.addeluxe.example;
 
+import org.fukata.android.addeluxe.AdDeluxeAdView;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
